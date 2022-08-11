@@ -177,7 +177,7 @@ client.on("interactionCreate", async (interaction) => {
                     case "catboy":
                         await database.execute(
                             "UPDATE catboyratings SET rating=? WHERE user=? AND image=?;",
-                            [parts[2], interaction.user.id, parts[4]],
+                            [parts[2], interaction.user.id, parts[6]],
                             { prepare: true }
                         );
                         await interaction.reply({ content: "Az értékelésed rögzítésre került.", ephemeral: true });
